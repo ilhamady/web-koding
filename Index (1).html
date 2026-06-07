@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Website Semester</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:0;
+  background:#f2f2f2;
+  text-align:center;
+}
+
+.page{ display:none; }
+
+.page.active{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#1e3a8a;
+  color:white;
+  cursor:pointer;
+  margin:10px;
+}
+
+button:hover{
+  background:#16307a;
+}
+
+.container{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:white;
+  width:240px;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:15px;
+}
+
+.info-card{
+  background:white;
+  width:85%;
+  max-width:900px;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+.info-card img{
+  width:300px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+.info-card p{
+  text-align:justify;
+  line-height:1.8;
+}
+
+.logo-sekolah img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.logo-sekolah h1{
+  color:#1e3a8a;
+  margin-top:10px;
+}
+
+.menu-foto{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.menu-foto img{
+  width:220px;
+  border-radius:15px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= PROFIL ================= -->
+<div id="profil" class="page active">
+
+  <!-- LOGO DAN NAMA SEKOLAH -->
+  <div class="logo-sekolah">
+    <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/logo%20smk.jpeg">
+    <h1>SMK UNITOMO SURABAYA</h1>
+  </div>
+
+  <br>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/alfa.jpeg">
+      <h3>Dimas Alfarosi</h3>
+      <p>X TKJ 1</p>
+    </div>
+
+    <div class="card">
+      <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/ilham.jpeg">
+      <h3>Ilham Ady Kusuma</h3>
+      <p>X TKJ 1</p>
+    </div>
+
+  </div>
+
+  <button onclick="nextPage('menu')">Next</button>
+</div>
+
+<!-- ================= MENU ================= -->
+<div id="menu" class="page">
+  <h1>Pilih Semester</h1>
+
+  <button onclick="nextPage('smt1')">Semester 1</button>
+  <button onclick="nextPage('smt2')">Semester 2</button>
+
+  <br><br>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/alfa.jpeg">
+      <h3>Dimas Alfarosi</h3>
+      <p>X TKJ 1</p>
+    </div>
+
+    <div class="card">
+      <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/ilham.jpeg">
+      <h3>Ilham Ady Kusuma</h3>
+      <p>X TKJ 1</p>
+    </div>
+  </div>
+
+  <br>
+  <button onclick="nextPage('profil')">Back</button>
+</div>
+
+<!-- ================= SEMESTER 1 ================= -->
+<div id="smt1" class="page">
+  <div class="info-card">
+
+    <h1>Semester 1</h1>
+
+    <button onclick="nextPage('specs')">SPECS</button>
+    <button onclick="nextPage('tsunade')">Tsunade</button>
+    <button onclick="nextPage('mosasaurus')">Mosasaurus</button>
+
+    <br><br>
+
+    <button onclick="nextPage('menu')">Back</button>
+
+  </div>
+</div>
+
+<!-- SPECS -->
+<div id="specs" class="page">
+  <div class="info-card">
+
+    <h1>SPECS Reborn Futsal</h1>
+
+    <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/specs.jpeg">
+
+    <p>SPECS Reborn adalah sepatu futsal lokal dengan kualitas baik dan harga terjangkau.</p>
+    <p>Outsole anti-slip membantu pergerakan cepat dan stabil.</p>
+    <p>Desain modern dan ringan cocok untuk anak muda.</p>
+
+    <button onclick="nextPage('smt1')">Back</button>
+
+  </div>
+</div>
+
+<!-- TSUNADE -->
+<div id="tsunade" class="page">
+  <div class="info-card">
+
+    <h1>Tsunade Senju</h1>
+
+    <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/sunade.jpeg">
+
+    <p>Tsunade adalah Hokage ke-5 dari Konoha.</p>
+    <p>Ia ahli dalam ninja medis dengan kemampuan penyembuhan hebat.</p>
+    <p>Memiliki kekuatan fisik luar biasa.</p>
+
+    <button onclick="nextPage('smt1')">Back</button>
+
+  </div>
+</div>
+
+<!-- MOSASAURUS -->
+<div id="mosasaurus" class="page">
+  <div class="info-card">
+
+    <h1>Mosasaurus</h1>
+
+    <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/mosasaurus.jpeg">
+
+    <p>Mosasaurus adalah reptil laut purba besar.</p>
+    <p>Panjang bisa mencapai 15 meter dengan gigi tajam.</p>
+    <p>Punah akibat perubahan besar di bumi.</p>
+
+    <button onclick="nextPage('smt1')">Back</button>
+
+  </div>
+</div>
+
+<!-- ================= SEMESTER 2 ================= -->
+<div id="smt2" class="page">
+  <div class="info-card">
+
+    <h1>Semester 2</h1>
+
+    <button onclick="nextPage('brio')">Honda Brio</button>
+    <button onclick="nextPage('cicak')">Cicak</button>
+    <button onclick="nextPage('pari')">Ikan Pari</button>
+
+    <br><br>
+
+    <button onclick="nextPage('menu')">Back</button>
+
+  </div>
+</div>
+
+<!-- BRIO -->
+<div id="brio" class="page">
+  <div class="info-card">
+
+    <h1>Honda Brio</h1>
+
+    <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/brio.jpeg">
+
+    <p>Honda Brio adalah mobil kecil yang populer di Indonesia.</p>
+    <p>Mesin 1.2L irit dan responsif.</p>
+    <p>Cocok untuk penggunaan di kota.</p>
+
+    <button onclick="nextPage('smt2')">Back</button>
+
+  </div>
+</div>
+
+<!-- CICAK -->
+<div id="cicak" class="page">
+  <div class="info-card">
+
+    <h1>Cicak</h1>
+
+    <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/cicak.jpeg">
+
+    <p>Cicak hidup di dinding rumah.</p>
+    <p>Memakan serangga seperti nyamuk.</p>
+    <p>Bisa memutuskan ekor untuk bertahan.</p>
+
+    <button onclick="nextPage('smt2')">Back</button>
+
+  </div>
+</div>
+
+<!-- IKAN PARI -->
+<div id="pari" class="page">
+  <div class="info-card">
+
+    <h1>Ikan Pari</h1>
+
+    <img src="https://uploads.onecompiler.io/44r4ga6qt/44r4g2495/pari.jpeg">
+
+    <p>Ikan pari memiliki tubuh pipih.</p>
+    <p>Hidup di dasar laut dan makan hewan kecil.</p>
+    <p>Beberapa memiliki sengat beracun.</p>
+
+    <button onclick="nextPage('smt2')">Back</button>
+
+  </div>
+</div>
+
+<script>
+function nextPage(id){
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
+</script>
+
+</body>
+</html>
